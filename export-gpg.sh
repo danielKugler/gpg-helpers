@@ -1,6 +1,14 @@
 #!/bin/bash
 
 # -------------------------------------
+# Filename statics
+# -------------------------------------
+GPG_PUBLIC_FILE="public-gpg.key"
+GPG_SECRET_FILE="secret-gpg.key"
+GPG_SUB_FILE="sub-gpg.key"
+GPG_OWNERTRUST_FILE="ownertrust.txt"
+
+# -------------------------------------
 # show gpg keys
 # -------------------------------------
 gpg --list-keys
@@ -39,7 +47,7 @@ fi
 # -------------------------------------
 # Export files
 # -------------------------------------
-gpg -a --export $GPG_UID > "${GPG_PREFIX}public-gpg.key"
-gpg -a --export-secret-keys $GPG_UID > "${GPG_PREFIX}secret-gpg.key"
-gpg -a --export-secret-subkeys $GPG_UID > "${GPG_PREFIX}sub.key"
-gpg --export-ownertrust > "${GPG_PREFIX}ownertrust.txt"
+gpg -a --export $GPG_UID > "${GPG_PREFIX}${GPG_PUBLIC_FILE}"
+gpg -a --export-secret-keys $GPG_UID > "${GPG_PREFIX}${GPG_SECRET_FILE}"
+gpg -a --export-secret-subkeys $GPG_UID > "${GPG_PREFIX}${GPG_SUB_FILE}"
+gpg --export-ownertrust > "${GPG_PREFIX}${GPG_OWNERTRUST_FILE}"
