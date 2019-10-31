@@ -3,7 +3,7 @@
 # -------------------------------------
 # Filename statics
 # -------------------------------------
-GPG_PUBLIC_FILE="public-gpg.keys"
+GPG_PUBLIC_FILE="public-gpg.key"
 GPG_SECRET_FILE="secret-gpg.key"
 GPG_SUB_FILE="sub-gpg.key"
 GPG_OWNERTRUST_FILE="ownertrust.txt"
