@@ -1,4 +1,4 @@
 # gpg-helpers
 
-import and export GnuPG keys.
+Import / export your GnuPG keys on a mac.
 Transfer them from and to YOUR other machines.
